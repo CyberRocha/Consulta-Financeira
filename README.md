@@ -3,6 +3,5 @@
 ```diff 
 ! Consulta Financeira
 ```
-
-> <img src="https://github.com/CyberRocha/Helicoptero/blob/main/Projeto/Helicoptero.png?raw=true" width="300" height="270"><br>
+> <img src="https://github.com/CyberRocha/Consulta-Financeira/blob/main/Projeto/TelaPrincipal.png" width="300" height="270">
 
