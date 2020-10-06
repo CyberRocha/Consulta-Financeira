@@ -1,0 +1,358 @@
+object Frm_ConsultaFinanceira: TFrm_ConsultaFinanceira
+  Left = 0
+  Top = 0
+  Caption = 'Consulta financeira'
+  ClientHeight = 478
+  ClientWidth = 667
+  Position = ScreenCenter
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  object OpenArquivo: TOpenDialog
+    Filter = 'Arquivos OFX|*.OFX'
+    Left = 216
+    Top = 232
+  end
+  object Lyt_MovimentoBancario: TLayout
+    Align = Top
+    Size.Width = 667.000000000000000000
+    Size.Height = 335.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    object Lbl_TituloMovimentacaoBancaria: TLabel
+      StyledSettings = [FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 225.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Movimenta'#231#227'o banc'#225'ria'
+      TabOrder = 14
+    end
+    object Btn_ImportaOFX: TButton
+      StyledSettings = [FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 265.000000000000000000
+      Size.Width = 169.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 19
+      Text = 'Importar arquivo OFX'
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = Btn_ImportaOFXClick
+    end
+    object Lbl_Saldo: TLabel
+      Anchors = [akTop, akRight]
+      StyledSettings = [FontColor]
+      Position.X = 471.000000000000000000
+      Position.Y = 260.000000000000000000
+      Size.Width = 184.000000000000000000
+      Size.Height = 31.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.HorzAlign = Trailing
+      Text = 'Saldo: R$ 0,00'
+      TabOrder = 20
+    end
+    object Shp_Area: TLine
+      Anchors = [akLeft, akTop, akRight]
+      LineType = Top
+      Position.X = 8.000000000000000000
+      Position.Y = 297.000000000000000000
+      Size.Width = 651.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Thickness = 1.299999952316284000
+    end
+    object StrG_Movimentacao: TStringGrid
+      Anchors = [akLeft, akTop, akRight]
+      CanFocus = True
+      ClipChildren = True
+      Position.X = 8.000000000000000000
+      Position.Y = 40.000000000000000000
+      Size.Width = 652.000000000000000000
+      Size.Height = 217.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      StyledSettings = [Size, Style, FontColor]
+      TabOrder = 21
+      RowCount = 0
+      Options = [ColLines, RowLines, RowSelect, Tabs, Header, AutoDisplacement]
+      OnDrawColumnHeader = StrG_MovimentacaoDrawColumnHeader
+      OnDrawColumnCell = StrG_MovimentacaoDrawColumnCell
+      Viewport.Width = 652.000000000000000000
+      Viewport.Height = 185.000000000000000000
+    end
+    object Lbl_CotacaoDia: TLabel
+      StyledSettings = [FontColor]
+      Position.X = 8.000000000000000000
+      Position.Y = 307.000000000000000000
+      Size.Width = 393.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 18.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      Text = 'Cota'#231#245'es do dia'
+      TabOrder = 1
+    end
+    object Btn_AtualizaCotacao: TButton
+      Anchors = [akTop, akRight]
+      StyledSettings = [FontColor]
+      Position.X = 520.000000000000000000
+      Position.Y = 306.000000000000000000
+      Size.Width = 138.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      Text = 'Atualizar cota'#231#227'o'
+      TextSettings.Font.Family = 'Comic Sans MS'
+      TextSettings.Font.Size = 14.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      OnClick = Btn_AtualizaCotacaoClick
+    end
+  end
+  object Scl_Cotacao: THorzScrollBox
+    Align = Client
+    Size.Width = 667.000000000000000000
+    Size.Height = 143.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 26
+    Viewport.Width = 667.000000000000000000
+    Viewport.Height = 143.000000000000000000
+    object Rtg_Dolar: TRectangle
+      Fill.Color = claWhite
+      Position.X = 8.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 211.000000000000000000
+      Size.Height = 117.000000000000000000
+      Size.PlatformDefault = False
+      object Lbl_TituloDolar: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 65.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'D'#243'lar'
+        TabOrder = 0
+      end
+      object Lbl_USDVenda: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 35.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Venda: R$ 0,00'
+        TabOrder = 1
+      end
+      object Lbl_USDCompra: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Compra: R$ 0,00'
+        TabOrder = 2
+      end
+      object Lbl_USDVariacao: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 75.000000000000000000
+        Size.Width = 160.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Varia'#231#227'o: 0,000%'
+        TabOrder = 3
+      end
+    end
+    object Rtg_Euro: TRectangle
+      Fill.Color = claWhite
+      Position.X = 227.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 211.000000000000000000
+      Size.Height = 117.000000000000000000
+      Size.PlatformDefault = False
+      object Lbl_TituloEuro: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 55.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Euro'
+        TabOrder = 0
+      end
+      object Lbl_EURCompra: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Compra: R$ 0,00'
+        TabOrder = 1
+      end
+      object Lbl_EURVenda: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 35.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Venda: R$ 0,00'
+        TabOrder = 2
+      end
+      object Lbl_EURVariacao: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 75.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Varia'#231#227'o: 0,000%'
+        TabOrder = 3
+      end
+    end
+    object Rtg_Bitcoin: TRectangle
+      Fill.Color = claWhite
+      Position.X = 446.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 211.000000000000000000
+      Size.Height = 117.000000000000000000
+      Size.PlatformDefault = False
+      object Lbl_TituloBitcoin: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 13.000000000000000000
+        Position.Y = 15.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 17.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 16.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Text = 'Bitcoin'
+        TabOrder = 0
+      end
+      object Lbl_BTCVenda: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 35.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Venda: R$ 0,00'
+        TabOrder = 1
+      end
+      object Lbl_BTCCompra: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 55.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Compra: R$ 0,00'
+        TabOrder = 2
+      end
+      object Lbl_BTCVariacao: TLabel
+        StyledSettings = [FontColor]
+        Position.X = 39.000000000000000000
+        Position.Y = 75.000000000000000000
+        Size.Width = 150.000000000000000000
+        Size.Height = 28.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Family = 'Comic Sans MS'
+        TextSettings.Font.Size = 13.000000000000000000
+        Text = 'Varia'#231#227'o: 0,000%'
+        TabOrder = 3
+      end
+    end
+  end
+  object RESTCliente: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 'https://api.hgbrasil.com/finance?key=publica'
+    Params = <>
+    Left = 208
+    Top = 56
+  end
+  object RESTSolicitante: TRESTRequest
+    Client = RESTCliente
+    Params = <>
+    Response = RESTResposta
+    SynchronizedEvents = False
+    Left = 304
+    Top = 56
+  end
+  object RESTResposta: TRESTResponse
+    ContentType = 'application/json'
+    Left = 400
+    Top = 56
+  end
+  object BindSourceDB: TBindSourceDB
+    DataSet = DM_BancoDados.FDQry_ConsultaMovimento
+    ScopeMappings = <>
+    Left = 408
+    Top = 192
+  end
+  object BindingsLista: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 324
+    Top = 197
+    object LinkGridToDataSourceBindSourceDB: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB
+      GridControl = StrG_Movimentacao
+      Columns = <
+        item
+          MemberName = 'DT_Movimento'
+          Header = 'Data'
+          Width = 78
+        end
+        item
+          MemberName = 'Descricao'
+          Header = 'Descri'#231#227'o'
+          Width = 424
+        end
+        item
+          MemberName = 'VL_Movimento'
+          Header = 'Valor'
+          Width = 128
+        end>
+    end
+  end
+end

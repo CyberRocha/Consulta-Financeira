@@ -1,0 +1,54 @@
+inherited Frm_ConsultaFinanceira_iPhone55in: TFrm_ConsultaFinanceira_iPhone55in
+  ClientHeight = 716
+  ClientWidth = 414
+  DesignerMasterStyle = 3
+  inherited Lyt_MovimentoBancario: TLayout
+    Size.Width = 414.000000000000000000
+    inherited Lbl_TituloMovimentacaoBancaria: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Btn_ImportaOFX: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Lbl_Saldo: TLabel
+      Position.X = 218.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Shp_Area: TLine
+      Size.Width = 398.000000000000000000
+    end
+    inherited StrG_Movimentacao: TStringGrid
+      Size.Width = 399.000000000000000000
+      Viewport.Width = 399.000000000000000000
+      Viewport.Height = 217.000000000000000000
+    end
+    inherited Lbl_CotacaoDia: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Btn_AtualizaCotacao: TButton
+      Position.X = 267.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Scl_Cotacao: THorzScrollBox
+    Size.Width = 414.000000000000000000
+    Size.Height = 381.000000000000000000
+    Viewport.Width = 414.000000000000000000
+    Viewport.Height = 376.000000000000000000
+    inherited Rtg_Dolar: TRectangle
+      inherited Lbl_TituloDolar: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Rtg_Euro: TRectangle
+      inherited Lbl_TituloEuro: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Rtg_Bitcoin: TRectangle
+      inherited Lbl_TituloBitcoin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end

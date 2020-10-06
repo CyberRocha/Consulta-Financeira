@@ -1,0 +1,54 @@
+inherited Frm_ConsultaFinanceira_XLgXhdpiTb: TFrm_ConsultaFinanceira_XLgXhdpiTb
+  ClientHeight = 1255
+  ClientWidth = 800
+  DesignerMasterStyle = 3
+  inherited Lyt_MovimentoBancario: TLayout
+    Size.Width = 800.000000000000000000
+    inherited Lbl_TituloMovimentacaoBancaria: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Btn_ImportaOFX: TButton
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Lbl_Saldo: TLabel
+      Position.X = 604.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Shp_Area: TLine
+      Size.Width = 784.000000000000000000
+    end
+    inherited StrG_Movimentacao: TStringGrid
+      Size.Width = 785.000000000000000000
+      Viewport.Width = 785.000000000000000000
+      Viewport.Height = 217.000000000000000000
+    end
+    inherited Lbl_CotacaoDia: TLabel
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+    inherited Btn_AtualizaCotacao: TButton
+      Position.X = 653.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Scl_Cotacao: THorzScrollBox
+    Size.Width = 800.000000000000000000
+    Size.Height = 920.000000000000000000
+    Viewport.Width = 800.000000000000000000
+    Viewport.Height = 920.000000000000000000
+    inherited Rtg_Dolar: TRectangle
+      inherited Lbl_TituloDolar: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Rtg_Euro: TRectangle
+      inherited Lbl_TituloEuro: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+    inherited Rtg_Bitcoin: TRectangle
+      inherited Lbl_TituloBitcoin: TLabel
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+      end
+    end
+  end
+end

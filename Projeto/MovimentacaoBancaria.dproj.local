@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/03/19 20:24:32.000.762,=C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>2020/03/19 20:24:36.000.774,=C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>2020/03/20 17:32:48.000.007,=C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/03/20 21:30:27.000.944,=C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/03/28 00:14:15.000.318,=C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/03/28 00:17:13.000.775,C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\Delphi_Projeto\Alterdata\Framework\ConsultaFinanceira.fmx</Transaction>
+    <Transaction>2020/03/28 00:17:13.000.775,C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Delphi_Projeto\Alterdata\Framework\ConsultaFinanceira.pas</Transaction>
+    <Transaction>2020/03/28 00:17:43.000.895,C:\Users\Rocha\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Delphi_Projeto\Alterdata\Framework\MovimentacaoBancaria.dproj</Transaction>
+    <Transaction>2020/03/28 01:52:06.000.263,=C:\Delphi_Projeto\Alterdata\Framework\ofxloader.pas</Transaction>
+    <Transaction>2020/03/28 11:42:52.000.724,=C:\Delphi_Projeto\Alterdata\Framework\Unit1.pas</Transaction>
+    <Transaction>2020/03/28 11:44:00.000.265,C:\Delphi_Projeto\Alterdata\Framework\BancoDados.dfm=C:\Delphi_Projeto\Alterdata\Framework\Unit1.dfm</Transaction>
+    <Transaction>2020/03/28 11:44:00.000.265,C:\Delphi_Projeto\Alterdata\Framework\BancoDados.pas=C:\Delphi_Projeto\Alterdata\Framework\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="Nexus_5_API_21" Android64="Nexus_5_API_21"/>
+	</ActiveMobileDevice>
+</BorlandProject>
